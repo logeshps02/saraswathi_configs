@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "verify-safe-map-e2e",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe -m py_compile .\\05-migration\\verify_safe_map_e2e.py; if ($LASTEXITCODE -eq 0) { .\\.venv\\Scripts\\python.exe .\\05-migration\\verify_safe_map_e2e.py }",
+			"group": "test"
+		},
+		{
+			"label": "verify-safe-map-e2e-2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe .\\05-migration\\verify_safe_map_e2e.py",
+			"group": "test"
+		}
+	]
+}
