@@ -1,0 +1,1418 @@
+$ df -h
+Filesystem       Size  Used Avail Use% Mounted on
+devroot         29G   25G  3.4G  89% 
+tmpfs            1.9G     0  1.9G   0% devshm
+tmpfs            767M  900K  766M   1% run
+tmpfs            5.0M     0  5.0M   0% runlock
+efivarfs         128K  3.3K  120K   3% sysfirmwareefiefivars
+devnvme0n1p16  881M  202M  617M  25% boot
+devnvme0n1p15  105M  6.2M   99M   6% bootefi
+$ sudo systemctl status apache2 mariadb
+Unit apache2.service could not be found.
+Unit mariadb.service could not be found.
+$ 
+$ sudo docker ps -a
+sudo docker command not found
+$ 
+$ 
+$ 
+$ 
+$ sudo snap services nextcloud
+error snap nextcloud not found
+$ 
+$ 
+$ 
+$ sudo ss -tulpn  grep -E '(80443)'
+tcp   LISTEN 0      511             0.0.0.080        0.0.0.0    users((nginx,pid=1433325,fd=7),(nginx,pid=1433324,fd=7),(nginx,pid=1433322,fd=7))
+tcp   LISTEN 0      511             0.0.0.0443       0.0.0.0    users((nginx,pid=1433325,fd=6),(nginx,pid=1433324,fd=6),(nginx,pid=1433322,fd=6))
+tcp   LISTEN 0      511                []80           []    users((nginx,pid=1433325,fd=8),(nginx,pid=1433324,fd=8),(nginx,pid=1433322,fd=8))
+tcp   LISTEN 0      511                []443          []    users((nginx,pid=1433325,fd=5),(nginx,pid=1433324,fd=5),(nginx,pid=1433322,fd=5))
+$ 
+$ 
+$ 
+$ sudo systemctl restart nginx php8.3-fpm
+$        not found
+$ ^[[A^[[A
+$ ^Z^C 
+$ 
+$ 
+$ 
+$ sudo ss -tulpn  grep -E '(80443)'
+tcp   LISTEN 0      511             0.0.0.080        0.0.0.0    users((nginx,pid=1598801,fd=7),(nginx,pid=1598800,fd=7),(nginx,pid=1598799,fd=7))
+tcp   LISTEN 0      511             0.0.0.0443       0.0.0.0    users((nginx,pid=1598801,fd=6),(nginx,pid=1598800,fd=6),(nginx,pid=1598799,fd=6))
+tcp   LISTEN 0      511                []80           []    users((nginx,pid=1598801,fd=8),(nginx,pid=1598800,fd=8),(nginx,pid=1598799,fd=8))
+tcp   LISTEN 0      511                []443          []    users((nginx,pid=1598801,fd=5),(nginx,pid=1598800,fd=5),(nginx,pid=1598799,fd=5))
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo find varwww usrsharenginx opt -name version.php -path nextcloud 2devnull
+varwwwnextcloudversion.php
+
+^Z[1] + Stopped                    sudo find varwww usrsharenginx opt -name version.php -path nextcloud 2devnull
+$ 
+$ ^C
+$ 
+$ 
+$ 
+$ sudo find varwww usrsharenginx opt -name version.php -path nextcloud 2devnull
+varwwwnextcloudversion.php
+
+$ 
+$ 
+$ 
+$ cd varwwwnextcloud
+sudo -u www-data php updaterupdater.phar
+$ Nextcloud Updater - version v34.0.0rc2-5-g713ccce
+
+Current version is 34.0.3.
+
+Update to Nextcloud 34.0.4 available. (channel stable)
+Following file will be downloaded automatically httpsgithub.comnextcloud-releasesserverreleasesdownloadv34.0.4nextcloud-34.0.4.zip
+Open changelog ↗
+
+Steps that will be executed
+[ ] Check for expected files
+[ ] Check for write permissions
+[ ] Create backup
+[ ] Downloading
+[ ] Verify integrity
+[ ] Extracting
+[ ] Enable maintenance mode
+[ ] Replace entry points
+[ ] Delete old files
+[ ] Move new files in place
+[ ] Done
+
+Start update [yN] y
+
+Info Pressing Ctrl-C will finish the currently running step and then stops the updater.
+
+[✔] Check for expected files
+[✔] Check for write permissions
+[✔] Create backup
+[✘] Downloading failed
+Curl error Failure writing output to destination
+
+Update failed. To resume or retry just execute the updater again.
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$         
+$ sudo rm -rf varwwwnextclouddataupdater-downloads
+$ 
+$ sudo apt-get clean
+sudo apt-get autoremove -y
+sudo apt-get autoremove -y
+$ sudo chown -R www-datawww-data varwwwnextcloud
+sudo chmod -R 775 varwwwnextcloud
+sudo chmod -R 775 varwwwnextcloud
+$ sudo -u www-data php updaterupdater.phar
+Nextcloud Updater - version v34.0.0rc2-5-g713ccce
+
+Current version is 34.0.3.
+
+Update to Nextcloud 34.0.4 available. (channel stable)
+Following file will be downloaded automatically httpsgithub.comnextcloud-releasesserverreleasesdownloadv34.0.4nextcloud-34.0.4.zip
+Open changelog ↗
+
+Steps that will be executed
+[ ] Check for expected files
+[ ] Check for write permissions
+[ ] Create backup
+[ ] Downloading
+[ ] Verify integrity
+[ ] Extracting
+[ ] Enable maintenance mode
+[ ] Replace entry points
+[ ] Delete old files
+[ ] Move new files in place
+[ ] Done
+
+Start update [yN] y
+
+Info Pressing Ctrl-C will finish the currently running step and then stops the updater.
+
+[✔] Check for expected files
+[✔] Check for write permissions
+[ ] Create backup ...PHP Notice  copy() Write of 310742 bytes failed with errno=28 No space left on device in pharvarwwwnextcloudupdaterupdater.pharlibUpdater.php on line 510
+[✘] Create backup failed
+Could not copy varwwwnextclouddistNcModal-DiDvgcU8-DlAqoAw2.chunk.mjs.map to optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803283distNcModal-DiDvgcU8-DlAqoAw2.chunk.mjs.map
+
+Update failed. To resume or retry just execute the updater again.
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php updaterupdater.phar --no-backup
+Nextcloud Updater - version v34.0.0rc2-5-g713ccce
+
+Current version is 34.0.3.
+
+Update to Nextcloud 34.0.4 available. (channel stable)
+Following file will be downloaded automatically httpsgithub.comnextcloud-releasesserverreleasesdownloadv34.0.4nextcloud-34.0.4.zip
+Open changelog ↗
+
+Steps that will be executed
+[ ] Check for expected files
+[ ] Check for write permissions
+[ ] Create backup
+[ ] Downloading
+[ ] Verify integrity
+[ ] Extracting
+[ ] Enable maintenance mode
+[ ] Replace entry points
+[ ] Delete old files
+[ ] Move new files in place
+[ ] Done
+
+Start update [yN] y
+
+Info Pressing Ctrl-C will finish the currently running step and then stops the updater.
+
+[✔] Check for expected files
+[✔] Check for write permissions
+[✔] Create backup
+[✘] Downloading failed
+Curl error Failure writing output to destination
+
+Update failed. To resume or retry just execute the updater again.
+$ 
+$ sudo sed -i 'sCreate backup,Create backup,n            startImmediately false,g' updaterupdater.phar
+sed couldn't write 2975 items to updatersedRIS6Mu No space left on device
+$ 
+$ # 1. Clear out all failed background update downloads and backups completely
+sudo rm -rf optnextclouddataupdater-downloads
+sudo rm -rf optnextclouddataupdater-backups
+
+# 2. Force delete old archived system logs to free up instant space
+sudo rm -f varlog.gz varlog.[0-9]
+sudo rm -rf varlognginx.gz
+
+# 3. Clear system package caches
+sudo apt-get clean
+$ sudo rm -rf optnextclouddataupdater-backups
+
+# 2. Force delete old archived system logs to free up instant space
+sudo rm -f varlog.gz varlog.[0-9]
+sudo rm -rf varlognginx.gz
+
+# 3. Clear system package caches
+sudo apt-get clean
+$ 
+$ df -h 
+Filesystem      Size  Used Avail Use% Mounted on
+devroot        29G   28G  4.4M 100% 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ sudo rm -rf tmp vartmp
+$ sudo du -ah  2devnull  sort -rh  head -n 20
+19G     
+12G     optnextclouddata
+12G     optnextcloud
+12G     opt
+5.0G    optnextclouddataganeshfilesPhotos
+5.0G    optnextclouddataganeshfiles
+5.0G    optnextclouddataganesh
+3.5G    optnextclouddataganeshfilesPhotosHarini
+3.2G    var
+2.7G    optnextclouddataganeshfilesPhotosHariniKundavai
+2.7G    optnextclouddataappdata_ocsfrsgd38gw
+2.6G    usr
+2.6G    optnextclouddataupdater-ocsfrsgd38gw
+2.5G    optnextclouddataappdata_ocsfrsgd38gwpreview
+2.4G    optnextclouddataupdater-ocsfrsgd38gwbackups
+2.3G    varwwwnextcloud
+2.3G    varwww
+2.3G    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791802800
+2.0G    varwwwnextcloudapps
+2.0G    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791802800apps
+$ sudo rm -rf optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791802800
+$ 
+$ df -h 
+Filesystem      Size  Used Avail Use% Mounted on
+devroot        29G   16G   13G  57% 
+$ 
+$ 
+$ 
+$ 
+$ cd varwwwnextcloud
+sudo -u www-data php updaterupdater.phar
+$ Nextcloud Updater - version v34.0.0rc2-5-g713ccce
+
+Current version is 34.0.3.
+
+Update to Nextcloud 34.0.4 available. (channel stable)
+Following file will be downloaded automatically httpsgithub.comnextcloud-releasesserverreleasesdownloadv34.0.4nextcloud-34.0.4.zip
+Open changelog ↗
+
+Steps that will be executed
+[ ] Check for expected files
+[ ] Check for write permissions
+[ ] Create backup
+[ ] Downloading
+[ ] Verify integrity
+[ ] Extracting
+[ ] Enable maintenance mode
+[ ] Replace entry points
+[ ] Delete old files
+[ ] Move new files in place
+[ ] Done
+
+Start update [yN] y
+
+Info Pressing Ctrl-C will finish the currently running step and then stops the updater.
+
+[✔] Check for expected files
+[✔] Check for write permissions
+[✔] Create backup
+[✔] Downloading
+[✔] Verify integrity
+[✔] Extracting
+[✔] Enable maintenance mode
+[✔] Replace entry points
+[✔] Delete old files
+[✔] Move new files in place
+[✔] Done
+
+Update of code successful.
+
+Should the occ upgrade command be executed [Yn] y
+Setting log level to debug
+Repair step Repair MySQL collation
+Repair info All tables already have the correct collation - nothing to do
+Repair step Copy data from accounts table when migrating from ownCloud
+Repair step Drop account terms table when migrating from ownCloud
+Updating database schema
+Updated database
+Updating files_pdfviewer ...
+Updated files_pdfviewer to 7.0.0
+Repair step Repair MySQL collation
+Repair info All tables already have the correct collation - nothing to do
+Repair step Clean tags and favorites
+Repair info 0 tags of deleted users have been removed.
+Repair info 0 tags for delete files have been removed.
+Repair info 0 tag entries for deleted tags have been removed.
+Repair info 1 tags with no entries have been removed.
+Repair step Repair invalid shares
+Repair step Move .step file of updater to backup location
+Repair info .step file exists
+Repair info .step file moved to .step-previous-update
+Repair step Add move avatar background job
+Repair info Repair step already executed
+Repair step Add preview cleanup background jobs
+Repair step Migrate oc_properties table to nextcloud schema
+Repair info oc_properties table does not exist.
+Repair step Migrate oauth2_clients table to nextcloud schema
+Repair info Update the oauth2_access_tokens table schema.
+Repair info Update the oauth2_clients table schema.
+Repair info Delete clients (and their related access tokens) with the redirect_uri starting with oc or ending with 
+Repair step Repair language codes
+Repair step Add log rotate job
+Repair step Clear frontend caches
+Repair info Image cache cleared
+Repair info JS cache cleared
+Repair step Clear every generated avatar
+Repair step Add preview background cleanup job
+Repair step Queue a one-time job to cleanup old backups of the updater
+Repair step Cleanup invalid photocache files for carddav
+Repair step Add background job to cleanup login flow v2 tokens
+Repair step Remove potentially over exposing share links
+Repair info No need to remove link shares.
+Repair step Clear access cache of projects
+Repair step Reset generated avatar flag
+Repair step Keep legacy encryption enabled
+Repair step Check encryption key format
+Repair step Remove old dashboard app config data
+Repair step Add job to cleanup the bruteforce entries
+Repair step Queue a one-time job to check for user uploaded certificates
+Repair step Repair DAV shares
+Repair step Add background job to set the lookup server share state for users
+Repair step Add token cleanup job
+Repair step Clean up abandoned apps
+Repair step Add possibly missing system config
+Repair step Add AI tasks cleanup jobs
+Repair step Queue a job to generate metadata
+Repair step Cache logo dimension to fix size in emails on Outlook
+Repair info Theming is not used to provide a logo
+Repair step Remove legacy .ocdata file
+Repair step Add cleanup-deleted-users background job
+Repair step Add cleanup login tokens background job
+Repair step Validate account properties and store phone numbers in a known format for search
+Repair info Queued background to validate account properties.
+Repair step Queue a job to move the preview
+Repair step Migrate config keys
+Repair step Cleanup completed background jobs
+Starting code integrity check...
+Finished code integrity check
+Update successful
+Maintenance mode is kept active
+Resetting log level
+
+occ upgrade finished
+
+Keep maintenance mode active [yN] N
+Maintenance mode disabled
+
+Maintenance mode is disabled
+$ 
+$ # 1. Clean up lingering database file locks left over from the space crash
+sudo -u www-data php occ filescleanup
+
+# 2. Rescan the files to ensure Nextcloud sees everything correctly
+sudo -u www-data php occ filesscan --all
+$ 
+# 2. Rescan the files to ensure Nextcloud sees everything correctly
+sudo -u www-data php occ filesscan --all
+
+0 orphaned file cache entries deleted
+0 orphaned file cache extended entries deleted
+0 orphaned mount entries deleted
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ applist  grep -E '(richdocumentscoolcollabora)'
+
+  - richdocuments 11.1.2
+  - richdocumentscode 26.4.402
+$ $ sudo -u www-data php occ appdisable richdocuments
+sudo -u www-data php occ appenable richdocuments
+sudo -u www-data php occ appenable richdocuments
+richdocuments 11.1.2 disabled
+$ ^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B
+sh 120  not found
+$ sudo -u www-data php occ appenable richdocuments
+richdocuments 11.1.2 enabled
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ upgrade
+
+No upgrade required.
+
+Note This command triggers the upgrade actions associated with a new version. The new version's updated source files must be deployed in advance.
+See the upgrade documentation httpsdocs.nextcloud.comserver34go.phpto=admin-update for more information.
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ configappset richdocuments wopi_url --value=http127.0.0.19980
+Config value 'wopi_url' for app 'richdocuments' is now set to 'http127.0.0.19980', stored as mixed in fast cache
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+mimetypelist.js is updated
+$ ps aux  grep -E '(coolwsdloolwsdconverttopdf)'
+www-data 1598854  0.3  0.0   4592  3776         S    1059   005 varwwwnextcloudappsrichdocumentscodecollaboraCollabora_Online.AppImage --appimage-extract-and-run --oremote_font_config.url=httpsfiles.t-saraswathi.inappsrichdocumentssettingsfonts.json --onet.lok_allow.host[14]=files.t-saraswathi.in --pidfile=tmpcoolwsd.pid
+www-data 1598879  0.0  0.0   7872  3276         S    1059   000 binbash tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffAppRun --oremote_font_config.url=httpsfiles.t-saraswathi.inappsrichdocumentssettingsfonts.json --onet.lok_allow.host[14]=files.t-saraswathi.in --pidfile=tmpcoolwsd.pid
+www-data 1598954  0.6  2.0 745788 81276         Sl   1059   009 coolwsd --config-file=tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffetccoolwsdcoolwsd.xml --disable-cool-user-checking --port=9983 --lo-template-path=tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraoffice --osys_template_path=tmpcoolwsd.nramEmOxuQsystemplate --osecurity.capabilities=false --osecurity.seccomp=false --ochild_root_path=tmpcoolwsd.nramEmOxuQjails --ofile_server_root_path=tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffusrsharecoolwsd --ossl.enable=false --onet.proxy_prefix=true --omemproportion=25 --ologging.file[@enable]=true --ologging.file.property[0][@name]=path --ologging.file.property[0]=tmpcoolwsd.nramEmOxuQcoolwsd.log --owelcome.enable=true --ouser_interface.mode=default --oallowed_languages=de_DE el en_GB en_US es_ES fr_FR hu it nl pt_BR pt_PT ru --ofetch_update_check=0 --oallow_update_popup=false --osecurity.server_signature=true --oremote_font_config.url=httpsfiles.t-saraswathi.inappsrichdocumentssettingsfonts.json --onet.lok_allow.host[14]=files.t-saraswathi.in --pidfile=tmpcoolwsd.pid
+www-data 1598967 32.6 10.0 745792 393868        R    1059   829 tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffusrbincoolforkit-ns --systemplate=tmpcoolwsd.nramEmOxuQsystemplate --lotemplate=tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraoffice --childroot=tmpcoolwsd.nramEmOxuQjails1598954-DC690B8E --clientport=9983 --masterport=coolwsd-UZyYcg7R --rlimits=limit_virt_mem_mb0;limit_stack_mem_kb8000;limit_file_size_mb0;limit_num_open_files0 --version --nocaps --noseccomp --ui=default --disable-cool-user-checking
+ssm-user 1609599  0.0  0.0   7096  2240 pts0    S+   1125   000 grep -E (coolwsdloolwsdconverttopdf)
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ configappset richdocuments wopi_url --value=http127.0.0.19983
+Config value 'wopi_url' for app 'richdocuments' is now set to 'http127.0.0.19983', stored as mixed in fast cache
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+mimetypelist.js is updated
+$ 
+$ 
+$ 
+$ 
+
+$ $ sudo -u www-data php occ configappset richdocuments wopi_url --value=httpst-saraswathi.in
+Config value 'wopi_url' for app 'richdocuments' is now set to 'httpst-saraswathi.in', stored as mixed in fast cache
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ cd varwwwnextcloud
+sudo -u www-data php occ configappdelete richdocuments wopi_url
+sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+$ sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+Config value wopi_url of app richdocuments deleted
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+mimetypelist.js is updated
+$ 
+$ sudo rm -rf tmpcoolwsd
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ configappset richdocuments wopi_url --value=httpst-saraswathi.in
+
+Config value 'wopi_url' for app 'richdocuments' is now set to 'httpst-saraswathi.in', stored as mixed in fast cache
+$ sudo -u www-data php occ configappset richdocuments disable_certificate_verification --value=yes
+sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+Config value were not updated
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+mimetypelist.js is updated
+$ 
+$ 
+$ 
+
+$ $ 
+$ 
+$ 
+$ sudo -u www-data php occ configappset richdocuments wopi_url --value=httpsfiles.t-saraswathi.in
+sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+sudo -u www-data php occ configappset richdocuments public_wopi_url --value=httpsfiles.t-saraswathi.in
+Config value 'wopi_url' for app 'richdocuments' is now set to 'httpsfiles.t-saraswathi.in', stored as mixed in fast cache
+$ 
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+
+mimetypelist.js is updated
+$ sudo nano etcnginxsites-enablednextcloud.conf
+$ sudo nginx -t
+20261012 113658 [warn] 1629813#1629813 duplicate extension wasm, content type applicationwasm, previous content type applicationwasm in etcnginxsites-enabledfiles.t-saraswathi.in42
+20261012 113658 [emerg] 1629813#1629813 location directive is not allowed here in etcnginxsites-enablednextcloud.conf2
+nginx configuration file etcnginxnginx.conf test failed
+$ 
+$ 
+$ sudo nginx -t
+20261012 113704 [warn] 1629919#1629919 duplicate extension wasm, content type applicationwasm, previous content type applicationwasm in etcnginxsites-enabledfiles.t-saraswathi.in42
+20261012 113704 [emerg] 1629919#1629919 location directive is not allowed here in etcnginxsites-enablednextcloud.conf2
+nginx configuration file etcnginxnginx.conf test failed
+$ sudo systemctl restart nginx php8.3-fpm
+Job for nginx.service failed because the control process exited with error code.
+See systemctl status nginx.service and journalctl -xeu nginx.service for details.
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo nano etcnginxsites-enablednextcloud.conf
+$ ^[[A    not found
+$  214 
+$ 
+$ 
+$ 
+$ sudo nano etcnginxsites-enablednextcloud.conf
+$ 
+$ 
+$ ^[[A^[[B^[[B
+sh 222  not found
+$ 
+$ sudo cat etcnginxsites-enablednextcloud.conf                     
+# Collabora  CODE WebSockets configuration
+location ~ ^appsrichdocumentscodeproxy.php {
+    proxy_pass http127.0.0.19983;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection Upgrade;
+    proxy_set_header Host $http_host;
+    proxy_read_timeout 36000s;
+}
+
+
+
+$ ^C
+$ ^C
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo rm etcnginxsites-enablednextcloud.conf
+$ sudo cat etcnginxsites-enabledfiles.t-saraswathi.in
+# Saraswathi Nextcloud HTTP-only site
+# Based on official nginx-root.conf.sample (2026-06-09)
+# TLS  HTTPS redirect is added later. Do not add ssl_ or return 301 https here yet.
+
+upstream php-handler {
+    server unixrunphpphp8.3-fpm.sock;
+}
+
+map $arg_v $asset_immutable {
+     ;
+    default , immutable;
+}
+
+server {
+    server_name files.t-saraswathi.in;
+    server_tokens off;
+    root varwwwnextcloud;
+
+    client_max_body_size 512M;
+    client_body_timeout 300s;
+    fastcgi_buffers 64 4K;
+    client_body_buffer_size 512k;
+
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 4;
+    gzip_min_length 256;
+    gzip_proxied expired no-cache no-store private no_last_modified no_etag auth;
+    gzip_types applicationatom+xml textjavascript applicationjavascript applicationjson applicationld+json applicationmanifest+json applicationrss+xml applicationvnd.geo+json applicationvnd.ms-fontobject applicationwasm applicationx-font-ttf applicationx-web-app-manifest+json applicationxhtml+xml applicationxml fontopentype imagebmp imagesvg+xml imagex-icon textcache-manifest textcss textplain textvcard textvnd.rim.location.xloc textvtt textx-component textx-cross-domain-policy;
+
+    add_header Referrer-Policy no-referrer always;
+    add_header X-Content-Type-Options nosniff always;
+    add_header X-Frame-Options SAMEORIGIN always;
+    add_header X-Permitted-Cross-Domain-Policies none always;
+    add_header X-Robots-Tag noindex, nofollow always;
+    add_header Strict-Transport-Security max-age=15552000; includeSubDomains always;
+    fastcgi_hide_header X-Powered-By;
+
+    include mime.types;
+    types {
+        textjavascript mjs;
+        applicationwasm wasm;
+    }
+
+    index index.php index.html index.php$request_uri;
+
+    location =  {
+        if ( $http_user_agent ~ ^DavClnt ) {
+            return 302 remote.phpwebdav$is_args$args;
+        }
+    }
+
+    location = robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+
+    location ^~ .well-known {
+        location = .well-knowncarddav { return 301 remote.phpdav; }
+        location = .well-knowncaldav  { return 301 remote.phpdav; }
+        location .well-knownacme-challenge    { try_files $uri $uri =404; }
+        location .well-knownpki-validation    { try_files $uri $uri =404; }
+        return 301 index.php$request_uri;
+    }
+
+    location ~ ^(buildtestsconfiglib3rdpartytemplatesdata)($)  { return 404; }
+    location ~ ^(.autotestoccissueindiedb_console)                { return 404; }
+    location ~ ^(composer.(jsonlock)package(-lock).jsoncoreshipped.json)$ { return 404; }
+
+    location ~ .php($) {
+        rewrite ^(!indexremotepubliccronstatusocsv[12]ocs-provider.+coreajaxupdateupdater.+.+richdocumentscode(_arm64)proxy) index.php$request_uri;
+        fastcgi_split_path_info ^(.+.php)(.)$;
+        set $path_info $fastcgi_path_info;
+        try_files $fastcgi_script_name =404;
+        include fastcgi_params;
+        fastcgi_pass php-handler;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $path_info;
+        fastcgi_param HTTPS on;
+        fastcgi_param modHeadersAvailable true;
+        fastcgi_param front_controller_active true;
+        fastcgi_intercept_errors on;
+        fastcgi_request_buffering on;
+        fastcgi_max_temp_file_size 0;
+    }
+
+    location ~ .(cssjsmjssvggificojpgpngwebpwasmtflitemapoggflacmp4webm)$ {
+        try_files $uri index.php$request_uri;
+        add_header Cache-Control public, max-age=15778463$asset_immutable;
+        add_header Referrer-Policy no-referrer always;
+        add_header X-Content-Type-Options nosniff always;
+        add_header X-Frame-Options SAMEORIGIN always;
+        add_header X-Permitted-Cross-Domain-Policies none always;
+        add_header X-Robots-Tag noindex, nofollow always;
+    add_header Strict-Transport-Security max-age=15552000; includeSubDomains always;
+        access_log off;
+    }
+
+    location ~ .(otfwoff2)$ {
+        try_files $uri index.php$request_uri;
+        expires 7d;
+        access_log off;
+    }
+
+    location remote {
+        return 301 remote.php$request_uri;
+    }
+
+    location  {
+        try_files $uri $uri index.php$request_uri;
+    }
+
+    listen []443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate etcletsencryptlivefiles.t-saraswathi.infullchain.pem; # managed by Certbot
+    ssl_certificate_key etcletsencryptlivefiles.t-saraswathi.inprivkey.pem; # managed by Certbot
+    include etcletsencryptoptions-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam etcletsencryptssl-dhparams.pem; # managed by Certbot
+
+}
+
+
+server {
+    if ($host = files.t-saraswathi.in) {
+        return 301 https$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80 default_server;
+    listen []80 default_server;
+    server_name files.t-saraswathi.in;
+    return 404; # managed by Certbot
+
+
+}$ sudo nano etcnginxsites-enabledfiles.t-saraswathi.in
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo cat etcnginxsites-enabledfiles.t-saraswathi.in
+# Saraswathi Nextcloud HTTP-only site
+# Based on official nginx-root.conf.sample (2026-06-09)
+# TLS  HTTPS redirect is added later. Do not add ssl_ or return 301 https here yet.
+
+upstream php-handler {
+    server unixrunphpphp8.3-fpm.sock;
+}
+
+map $arg_v $asset_immutable {
+     ;
+    default , immutable;
+}
+
+server {
+    server_name files.t-saraswathi.in;
+    server_tokens off;
+    root varwwwnextcloud;
+
+    client_max_body_size 512M;
+    client_body_timeout 300s;
+    fastcgi_buffers 64 4K;
+    client_body_buffer_size 512k;
+
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 4;
+    gzip_min_length 256;
+    gzip_proxied expired no-cache no-store private no_last_modified no_etag auth;
+    gzip_types applicationatom+xml textjavascript applicationjavascript applicationjson applicationld+json applicationmanifest+json applicationrss+xml applicationvnd.geo+json applicationvnd.ms-fontobject applicationwasm applicationx-font-ttf applicationx-web-app-manifest+json applicationxhtml+xml applicationxml fontopentype imagebmp imagesvg+xml imagex-icon textcache-manifest textcss textplain textvcard textvnd.rim.location.xloc textvtt textx-component textx-cross-domain-policy;
+
+    add_header Referrer-Policy no-referrer always;
+    add_header X-Content-Type-Options nosniff always;
+    add_header X-Frame-Options SAMEORIGIN always;
+    add_header X-Permitted-Cross-Domain-Policies none always;
+    add_header X-Robots-Tag noindex, nofollow always;
+    add_header Strict-Transport-Security max-age=15552000; includeSubDomains always;
+    fastcgi_hide_header X-Powered-By;
+
+    include mime.types;
+    types {
+        textjavascript mjs;
+        applicationwasm wasm;
+    }
+
+    index index.php index.html index.php$request_uri;
+
+    location =  {
+        if ( $http_user_agent ~ ^DavClnt ) {
+            return 302 remote.phpwebdav$is_args$args;
+        }
+    }
+
+    location = robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+
+    location ^~ .well-known {
+        location = .well-knowncarddav { return 301 remote.phpdav; }
+        location = .well-knowncaldav  { return 301 remote.phpdav; }
+        location .well-knownacme-challenge    { try_files $uri $uri =404; }
+        location .well-knownpki-validation    { try_files $uri $uri =404; }
+        return 301 index.php$request_uri;
+    }
+
+    location ~ ^(buildtestsconfiglib3rdpartytemplatesdata)($)  { return 404; }
+    location ~ ^(.autotestoccissueindiedb_console)                { return 404; }
+    location ~ ^(composer.(jsonlock)package(-lock).jsoncoreshipped.json)$ { return 404; }
+
+    location ~ .php($) {
+        rewrite ^(!indexremotepubliccronstatusocsv[12]ocs-provider.+coreajaxupdateupdater.+.+richdocumentscode(_arm64)proxy) index.php$request_uri;
+        fastcgi_split_path_info ^(.+.php)(.)$;
+        set $path_info $fastcgi_path_info;
+        try_files $fastcgi_script_name =404;
+        include fastcgi_params;
+        fastcgi_pass php-handler;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $path_info;
+        fastcgi_param HTTPS on;
+        fastcgi_param modHeadersAvailable true;
+        fastcgi_param front_controller_active true;
+        fastcgi_intercept_errors on;
+        fastcgi_request_buffering on;
+        fastcgi_max_temp_file_size 0;
+    }
+
+    location ~ .(cssjsmjssvggificojpgpngwebpwasmtflitemapoggflacmp4webm)$ {
+        try_files $uri index.php$request_uri;
+        add_header Cache-Control public, max-age=15778463$asset_immutable;
+        add_header Referrer-Policy no-referrer always;
+        add_header X-Content-Type-Options nosniff always;
+        add_header X-Frame-Options SAMEORIGIN always;
+        add_header X-Permitted-Cross-Domain-Policies none always;
+        add_header X-Robots-Tag noindex, nofollow always;
+    add_header Strict-Transport-Security max-age=15552000; includeSubDomains always;
+        access_log off;
+    }
+
+    location ~ .(otfwoff2)$ {
+        try_files $uri index.php$request_uri;
+        expires 7d;
+        access_log off;
+    }
+
+    location remote {
+        return 301 remote.php$request_uri;
+    }
+
+    location  {
+        try_files $uri $uri index.php$request_uri;
+    }
+
+    listen []443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate etcletsencryptlivefiles.t-saraswathi.infullchain.pem; # managed by Certbot
+    ssl_certificate_key etcletsencryptlivefiles.t-saraswathi.inprivkey.pem; # managed by Certbot
+    include etcletsencryptoptions-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam etcletsencryptssl-dhparams.pem; # managed by Certbot
+
+}
+
+
+server {
+    if ($host = files.t-saraswathi.in) {
+        return 301 https$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80 default_server;
+    listen []80 default_server;
+    server_name files.t-saraswathi.in;
+    return 404; # managed by Certbot
+
+
+}$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ cat  'SCRIPT'  tmpfix_office.sh
+ i am in 
+$ 
+$ cat  'SCRIPT'  tmpfix_office.sh
+    
+ ^Z^C
+$ sudo rm -f etcnginxsites-enablednextcloud.conf
+$ cd varwwwnextcloud
+sudo -u www-data php occ configappdelete richdocuments wopi_url
+sudo -u www-data php occ configappdelete richdocuments public_wopi_url
+sudo -u www-data php occ configappdelete richdocuments disable_certificate_verification$ sudo -u www-data php occ configappdelete richdocuments public_wopi_url
+sudo -u www-data php occ configappdelete richdocuments disable_certificate_verificationConfig value wopi_url of app richdocuments deleted
+$ 
+$ sudo -u www-data php occ configappset richdocuments wopi_allowlist --value=127.0.0.1,1,10.20.1.144,3.111.213.217
+sudo -u www-data php occ configsystemset allow_local_remote_servers --value=true --type=booleansudo -u www-data php occ configsystemset allow_local_remote_servers --value=true --type=booleanConfig value were not updated
+$ 
+$ sudo pkill -f coolwsd; sudo pkill -f coolforkit; sudo pkill -f Collabora_Online; sleep 2
+sudo rm -rf tmpcoolwsd tmpappimage_extracted_sudo rm -rf tmpcoolwsd tmpappimage_extracted_
+$ $ sudo -u www-data php occ appdisable richdocumentscode
+sleep 3
+sudo -u www-data php occ appenable richdocumentscodesleep 3
+sudo -u www-data php occ appenable richdocumentscoderichdocumentscode 26.4.402 disabled
+$ 
+$ sleep 15
+sudo -u www-data php occ appdisable richdocuments
+sleep 2
+sudo -u www-data php occ appenable richdocuments
+sudo -u www-data php occ maintenancemimetypeupdate-js
+
+$ sleep 2
+sudo -u www-data php occ appenable richdocuments
+sudo -u www-data php occ maintenancemimetypeupdate-js
+
+richdocuments 11.1.2 disabled
+$ sudo nginx -t
+20261012 120813 [warn] 1630249#1630249 duplicate extension wasm, content type applicationwasm, previous content type applicationwasm in etcnginxsites-enabledfiles.t-saraswathi.in42
+nginx the configuration file etcnginxnginx.conf syntax is ok
+nginx configuration file etcnginxnginx.conf test is successful
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+
+$ $ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo -u www-data php occ appenable richdocumentscode
+richdocumentscode 26.4.402 enabled
+$ sudo -u www-data php occ appenable richdocuments
+richdocuments 11.1.2 enabled
+$ sudo -u www-data php occ maintenancemimetypeupdate-js
+mimetypelist.js is updated
+$ sudo systemctl restart nginx php8.3-fpm
+$ sudo systemctl is-active nginx
+sudo systemctl is-active php8.3-fpm
+ps aux  grep [c]oolwsd  head -2
+curl -s httpsfiles.t-saraswathi.instatus.phpsudo systemctl is-active php8.3-fpm
+ps aux  grep [c]oolwsd  head -2
+curl -s httpsfiles.t-saraswathi.instatus.phpactive
+$ 
+$ 
+$ 
+$ 
+$ sudo systemctl is-active php8.3-fpm
+active
+$ ps aux  grep [c]oolwsd  head -2
+$ curl -s httpsfiles.t-saraswathi.instatus.php
+{installedtrue,maintenancefalse,needsDbUpgradefalse,version34.0.4.1,versionstring34.0.4,edition,productnameNextcloud,extendedSupportfalse}$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ curl -s -k httpsfiles.t-saraswathi.inappsrichdocumentscodeproxy.phpreq=hostingdiscovery  head -5
+sleep 10
+ps aux  grep [c]oolwsd  head -2
+sudo -u www-data php occ configappget richdocuments wopi_url 2&1
+wopi-discovery
+    net-zone name=external-http
+
+        !-- Writer documents --
+        app favIconUrl=httpsfiles.t-saraswathi.inappsrichdocumentscodeproxy.phpreq=browser201368fc8dimagesx-office-document.svg name=writer
+$ $ www-data 1630374 21.2  0.0   4592  3852         S    1210   005 varwwwnextcloudappsrichdocumentscodecollaboraCollabora_Online.AppImage --appimage-extract-and-run --oremote_font_config.url=httpsfiles.t-saraswathi.inappsrichdocumentssettingsfonts.json --onet.lok_allow.host[14]=files.t-saraswathi.in --pidfile=tmpcoolwsd.pid
+www-data 1630376  0.0  0.0   7872  3784         S    1211   000 binbash tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffAppRun --oremote_font_config.url=httpsfiles.t-saraswathi.inappsrichdocumentssettingsfonts.json --onet.lok_allow.host[14]=files.t-saraswathi.in --pidfile=tmpcoolwsd.pid
+$ $ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ cd varwwwnextcloud
+sudo -u www-data php occ configappset richdocuments wopi_url --value=httpsfiles.t-saraswathi.in
+sudo -u www-data php occ richdocumentsactivate-config$ sudo -u www-data php occ richdocumentsactivate-config
+Config value 'wopi_url' for app 'richdocuments' is now set to 'httpsfiles.t-saraswathi.in', stored as mixed in fast cache
+$ sudo -u www-data php occ configappget richdocuments wopi_url
+httpsfiles.t-saraswathi.in
+$ 
+$ 
+$ 
+$ df -h
+Filesystem       Size  Used Avail Use% Mounted on
+devroot         29G   19G  9.9G  65% 
+tmpfs            1.9G     0  1.9G   0% devshm
+tmpfs            767M  900K  766M   1% run
+tmpfs            5.0M     0  5.0M   0% runlock
+efivarfs         128K  3.3K  120K   3% sysfirmwareefiefivars
+devnvme0n1p16  881M  202M  617M  25% boot
+devnvme0n1p15  105M  6.2M   99M   6% bootefi
+$ ^[[A    not found
+$  381 
+$ 
+$ df -h
+df invalid option -- ''
+Try 'df --help' for more information.
+$ ^[[A    not found
+$  385 
+$ 
+$ 
+$ 
+$ df -h 
+ ^Z^C
+$ ^[[A^[[B
+sh 391  not found
+$ 
+$ 
+$ 
+$ 
+$ 
+$ df -h
+ ^Z^C
+$ 
+$ df -h 
+Filesystem      Size  Used Avail Use% Mounted on
+devroot        29G   19G  9.9G  65% 
+$ ^[[A    not found
+$ ^Z^C0 
+$ $ df -h 
+sh 401 $ not found
+$ ^[[A    not found
+$  402 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ df -h 
+Filesystem      Size  Used Avail Use% Mounted on
+devroot        29G   19G  9.9G  65% 
+$ 
+$ 
+$ 
+$ sudo du -ah  2devnull  sort -rh  head -n 20
+20G     
+12G     optnextclouddata
+12G     optnextcloud
+12G     opt
+5.0G    optnextclouddataganeshfilesPhotos
+5.0G    optnextclouddataganeshfiles
+5.0G    optnextclouddataganesh
+3.5G    optnextclouddataganeshfilesPhotosHarini
+3.2G    var
+2.7G    optnextclouddataganeshfilesPhotosHariniKundavai
+2.7G    optnextclouddataappdata_ocsfrsgd38gw
+2.6G    usr
+2.5G    optnextclouddataappdata_ocsfrsgd38gwpreview
+2.4G    optnextclouddataupdater-ocsfrsgd38gwbackups
+2.4G    optnextclouddataupdater-ocsfrsgd38gw
+2.3G    varwwwnextcloud
+2.3G    varwww
+2.3G    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955
+2.0G    varwwwnextcloudapps
+2.0G    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955apps
+$ sudo find  -type f -exec du -h {} + 2devnull  sort -rh  head -n 20
+1.4G    optnextclouddataganeshfilesPhotosDarshan VideoHighlights_Siva.mp4
+272M    varwwwnextcloudappsrichdocumentscodecollaboraCollabora_Online.AppImage
+272M    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsrichdocumentscodecollaboraCollabora_Online.AppImage
+190M    optawsamazon-cloudwatch-agentbinamazon-cloudwatch-agent
+182M    tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeprogramlibmergedlo.so
+123M    usrlibx86_64-linux-gnulibLLVM.so.19.1
+118M    usrlibllvm-18liblibLLVM.so.1
+101M    optnextclouddatanextcloud.log.1
+97M     optnextclouddataappdata_ocsfrsgd38gwlibresignx86_64linuxjavajdk-21.0.8+9-jrelibmodules
+74M     varlibsnapdseedsnapscore22_2411.snap
+74M     varlibsnapdcachef9ef8626ccda54c0d973d0fcd5759c9c1e32ad59f33baf864eed49bc196dd337f94860607db96052617aad934b7beba6
+74M     varlibsnapdcache57b59f301fd0da058052bd70b344850b282e683a867ebac7329ca4cb9c6b17041162d1c1a47d78d021ccc6ec0dc87b82
+70M     varlibaptlistsap-south-1.ec2.archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages
+63M     optnextclouddataaglinfilesDeck5. DIGICOVAI PRIVATE LIMITED.rar
+63M     bootinitrd.img-7.0.0-1014-aws
+63M     bootinitrd.img-7.0.0-1011-aws
+62M     usrlibllvm-18liblibclang-cpp.so.18.1
+54M     varlogjournalec20390b45a1b90c471a14b30e296a32system@0d9506c4536d41f8bc8b269bcd52e9b1-0000000000016d33-00065b9c1dea27fc.journal
+54M     varlogjournalec20390b45a1b90c471a14b30e296a32system@0d9506c4536d41f8bc8b269bcd52e9b1-0000000000000db1-000659d02a851366.journal
+51M     varlibsnapdcachedc3bf15d908c01fd2577731b7f6ff2e2d78222101ff23521cadff43e77cb4a5a75294dc9a5d4489a14bb10224d86db44
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ ^[[A^[[ not found
+$  438 
+$ 
+$ 
+$ 
+$ sudo find  -type f -exec du -h {} + 2devnull  sort -rh  head -n 200
+1.4G    optnextclouddataganeshfilesPhotosDarshan VideoHighlights_Siva.mp4
+272M    varwwwnextcloudappsrichdocumentscodecollaboraCollabora_Online.AppImage
+272M    optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsrichdocumentscodecollaboraCollabora_Online.AppImage
+190M    optawsamazon-cloudwatch-agentbinamazon-cloudwatch-agent
+182M    tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeprogramlibmergedlo.so
+123M    usrlibx86_64-linux-gnulibLLVM.so.19.1
+118M    usrlibllvm-18liblibLLVM.so.1
+101M    optnextclouddatanextcloud.log.1
+97M     optnextclouddataappdata_ocsfrsgd38gwlibresignx86_64linuxjavajdk-21.0.8+9-jrelibmodules
+74M     varlibsnapdseedsnapscore22_2411.snap
+74M     varlibsnapdcachef9ef8626ccda54c0d973d0fcd5759c9c1e32ad59f33baf864eed49bc196dd337f94860607db96052617aad934b7beba6
+74M     varlibsnapdcache57b59f301fd0da058052bd70b344850b282e683a867ebac7329ca4cb9c6b17041162d1c1a47d78d021ccc6ec0dc87b82
+70M     varlibaptlistsap-south-1.ec2.archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages
+63M     optnextclouddataaglinfilesDeck5. DIGICOVAI PRIVATE LIMITED.rar
+63M     bootinitrd.img-7.0.0-1014-aws
+63M     bootinitrd.img-7.0.0-1011-aws
+62M     usrlibllvm-18liblibclang-cpp.so.18.1
+54M     varlogjournalec20390b45a1b90c471a14b30e296a32system@0d9506c4536d41f8bc8b269bcd52e9b1-0000000000016d33-00065b9c1dea27fc.journal
+54M     varlogjournalec20390b45a1b90c471a14b30e296a32system@0d9506c4536d41f8bc8b269bcd52e9b1-0000000000000db1-000659d02a851366.journal
+51M     varlibsnapdcachedc3bf15d908c01fd2577731b7f6ff2e2d78222101ff23521cadff43e77cb4a5a75294dc9a5d4489a14bb10224d86db44
+50M     varlibsnapdseedsnapssnapd_26865.snap
+46M     optnextclouddatasnekafiles_trashbinfilesUPLOADED ON 27.01.2025 & 28.01.2025-RIO CHILDRENS HOSPITAL (DINDIGUL) PRIVATE LIMITED (2).d1791382214UPLOADED ON 27.01.2025 & 28.01.2025-RIO CHILDRENS HOSPITAL (DINDIGUL) PRIVATE LIMITED-AF-24-25.zip
+46M     optnextclouddatasaraswathi.adminfiles_trashbinfilesUPLOADED ON 27.01.2025 & 28.01.2025-RIO CHILDRENS HOSPITAL (DINDIGUL) PRIVATE LIMITED (2).d1791382214UPLOADED ON 27.01.2025 & 28.01.2025-RIO CHILDRENS HOSPITAL (DINDIGUL) PRIVATE LIMITED-AF-24-25.zip
+45M     varlibsnapdcache8aa389349cbca43be25b03623d3006f202d1b714d6c2d505eb42a75b9f67d5dab182da60bf333f06dd2b8ba6c7bf9e8e
+42M     usrlocalaws-cliv22.36.30distlibpython3.14.so.1.0
+37M     varlognginxaccess.log
+34M     snapsnapd28254usrlibsnapdsnapd
+33M     usrlibx86_64-linux-gnulibclang-18.so.18
+33M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsviewerplaywrightfixturesimage.bmp
+32M     varwwwnextcloudappspassword_policylistslist-8.php
+32M     tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeprogramlibicudata.so.78
+32M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appspassword_policylistslist-8.php
+31M     varlibaptlistsap-south-1.ec2.archive.ubuntu.com_ubuntu_dists_noble_universe_i18n_Translation-en
+31M     tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeshareextensionsdict-deth_de_DE_v2.dat
+31M     tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeshareextensionsdict-deth_de_CH_v2.dat
+31M     snapsnapd27738usrlibsnapdsnapd
+31M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7591aa.jpg
+30M     varwwwnextcloudappsmailvendornextcloudkitinerary-binbinkitinerary-extractor
+30M     usrlibx86_64-linux-gnulibicudata.so.74.2
+30M     usrlibsnapdsnapd
+30M     tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeprogramlibswlo.so
+30M     tmpappimage_extracted_d9fc9502459b946d6ee812f125920bffoptcollaboraofficeprogramlibsclo.so
+30M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsmailvendornextcloudkitinerary-binbinkitinerary-extractor
+30M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7645.jpg
+30M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7596.jpg
+29M     varwwwnextcloudcoreskeletonNextcloud Manual.pdf
+29M     varlibsnapdsnapsamazon-ssm-agent_13009.snap
+29M     varlibsnapdcache99cdccabcdd14712e1ff4fd375603c4c5edc7cb89c3ba468d28c72131a5636ec0b3e4e11529928683955f1a483f95524
+29M     optnextclouddatavijalakshmifiles_trashbinfilesNextcloud Manual.pdf.d1789811704
+29M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955coreskeletonNextcloud Manual.pdf
+29M     optnextclouddatasnekafiles_trashbinfilesNextcloud Manual.pdf.d1789811638
+29M     optnextclouddataselvameenafiles_trashbinfilesNextcloud Manual.pdf.d1789812724
+29M     optnextclouddatasaranyafilesNextcloud Manual.pdf
+29M     optnextclouddatalogesh_psfilesNextcloud Manual.pdf
+29M     optnextclouddatajayalakshmifiles_trashbinfilesNextcloud Manual.pdf.d1789811703
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7693.jpg
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7671.jpg
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7630.jpg
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7615.jpg
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7598.jpg
+29M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7589.jpg
+29M     optnextclouddatadhanapriyafiles_trashbinfilesNextcloud Manual.pdf.d1789811694
+29M     optnextclouddataasarudeenfilesNextcloud Manual.pdf
+29M     optnextclouddataaglinfiles_trashbinfilesNextcloud Manual.pdf.d1789811619
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7694.jpg
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7667.jpg
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7657.jpg
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7649.jpg
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7623.jpg
+28M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7612.jpg
+27M     varwwwnextcloudappsattendancevendor-binrectorvendorphpstanphpstanphpstan.phar
+27M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsattendancevendor-binrectorvendorphpstanphpstanphpstan.phar
+27M     optnextclouddatanextcloud.log
+27M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7637.jpg
+27M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7604.jpg
+26M     varwwwnextcloudappsfiles_accesscontrolvendor-binrectorvendorphpstanphpstanphpstan.phar
+26M     snapamazon-ssm-agent13349ssm-agent-worker
+26M     snapamazon-ssm-agent13009ssm-agent-worker
+26M     optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955appsfiles_accesscontrolvendor-binrectorvendorphpstanphpstanphpstan.phar
+26M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7684.jpg
+26M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7640.jpg
+26M     optnextclouddataappdata_ocsfrsgd38gwlibresignx86_64linuxjavajdk-21.0.8+9-jrelibserverlibjvm.so
+25M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7695.JPG
+25M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7716.jpg
+25M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7678.jpg
+25M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7660.jpg
+25M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7617.jpg
+24M     usrlibx86_64-linux-gnulibgs.so.10.02
+24M     usrliblinux-aws-7.0-tools-7.0.0-1014perf
+24M     usrliblinux-aws-7.0-tools-7.0.0-1011perf
+24M     snapamazon-ssm-agent13349ssm-document-worker
+24M     snapamazon-ssm-agent13009ssm-document-worker
+24M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7718.JPG
+24M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7717.JPG
+24M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7716.JPG
+24M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7712.JPG
+24M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7711.JPG
+24M     optnextclouddataganeshfilesPhotosHariniEdited PhotoIMG (1).jpg
+24M     optnextclouddataganeshfilesPhotosHariniEdited PhotoDSC_7697a.jpg
+23M     snapsnapd27738usrbinsnap
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7715.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7713.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7710.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7709.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7708.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7707.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7706.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7705.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7697.JPG
+23M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7696.JPG
+22M     usrbinsnap
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7714.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7704.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7645.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7615.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7599.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7593.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7591.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7590.JPG
+22M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7589.JPG
+21M     usrlocalaws-cliv22.36.30distawsclidataac.index
+21M     snapamazon-ssm-agent13349ssm-cli
+21M     snapamazon-ssm-agent13009ssm-cli
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiSelectedDSC_7598.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiSelectedDSC_7596.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7703.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7702.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7700.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7699.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7698.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7694.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7693.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7674.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7673.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7672.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7671.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7670.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7658.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7657.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7655.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7653.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7652.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7651.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7650.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7649.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7648.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7647.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7646.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7642.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7639.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7637.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7636.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7635.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7634.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7633.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7632.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7630.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7621.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7620.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7614.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7613.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7612.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7611.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7610.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7609.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7608.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7607.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7605.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7604.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7602.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7601.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7600.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7598.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7597.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7596.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7595.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7594.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7586.JPG
+21M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7585.JPG
+20M     snapamazon-ssm-agent13349ssm-session-worker
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7692.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7691.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7690.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7689.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7688.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7687.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7686.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7685.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7684.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7683.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7682.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7681.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7680.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7679.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7678.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7677.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7676.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7675.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7669.JPG
+20M     optnextclouddataganeshfilesPhotosHariniKundavaiDSC_7668.JPG
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ sudo rm -rf optnextclouddataupdater-ocsfrsgd38gwbackupsnextcloud-34.0.3.2-1791803955
+$ sudo rm -f optnextclouddatanextcloud.log.1
+$ sudo rm -rf varlibsnapdcache
+$ cd varwwwnextcloud
+sudo -u www-data php occ trashbincleanup --all
+$ 
+                                      
+  The --all option does not exist.  
+                                      
+
+trashbincleanup [--output [OUTPUT]] [--all-users] [--] [user_id...]
+
+$ 
+$ 
+$ 
+$ df -h 
+Filesystem      Size  Used Avail Use% Mounted on
+devroot        29G   16G   13G  57% 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ cd varwwwnextcloud
+sudo -u www-data php occ trashbincleanup --all-users
+$ Remove deleted files for all users
+Remove deleted files for users on backend Database
+   aglin
+   asarudeen
+   dhanapriya
+   ganesh
+   jayalakshmi
+   logesh_ps
+   saranya
+   saraswathi.admin
+
+   selvameena
+   sneka
+   vijalakshmi
+$ 
+$ 
+$ sudo -u www-data php occ configsystemset preview_max_x --value=1024
+sudo -u www-data php occ configsystemset preview_max_y --value=1024
+sudo -u www-data php occ configsystemset preview_max_y --value=1024
+System config value preview_max_x set to string 1024
+$ 
+$ 

@@ -1,0 +1,11 @@
+saved c:\Users\U.lalitha navya sri\Downloads\Logesh files\05-migration\STILL_TO_DO.xlsx
+STILL_OPEN_FROM_98 32
+issue
+Path is in file list — not copied    18
+No folder picked yet                 14
+TO_DO 37
+issue
+Path is in file list — not copied    19
+No folder picked yet                 14
+Copy when H: is attached              4
+review_ok True review_rows 14724

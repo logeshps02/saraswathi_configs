@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Excel temp/lock files
+~$*
+
+# IDE settings
+.vscode/
+
+# Large CSV files (too big for GitHub)
+STRUCTURED_COPY_MAP_FINAL_used.csv
+STRUCTURED_COPY_MAP_SAFE (1).csv
+STRUCTURED_COPY_MAP_SAFE (2).csv
+STRUCTURED_COPY_MAP_SAFE.csv
+_COPY_LOG.csv
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

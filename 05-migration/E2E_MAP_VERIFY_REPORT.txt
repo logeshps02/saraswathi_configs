@@ -1,0 +1,18 @@
+=== COUNTS ===
+used_rows 6863
+safe_rows 6863
+updated_rows 1322 keep 851 remap 460 nil 11
+actions {'keep': 5811, 'remap_alias': 1030, 'nil_unsorted': 12, 'remap_alias_chain': 10}
+used unique dest_company 1322
+updated names not in used dest 0
+used dest not in updated sheet 0
+nil_rows 12 remap names applied 460 of 460
+form_only_paths 6 h_drive 4 empty_src 0
+unique dest_company after 868
+leftover DIR/KYC dest_company 0
+dest_relative collisions same-source 598 diff-source 12
+source_path mapping to >1 dest_company 91
+remap source names still appearing as dest_company (non-identity) 0
+
+=== FAILURES 40 ===
+     40  SOURCE_TO_MULTI_COMPANY

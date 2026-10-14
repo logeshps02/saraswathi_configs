@@ -1,0 +1,66 @@
+F:\f company folders vs 2026-27 map
+Decision 2026-09-19: the 33 names not on F:\f are SEPARATE companies. Keep their own DATA1 folders. Do not merge.
+Unsorted: THIRUKONDA SUBRAMANIAN SIVAKUMAR stays under _UNSORTED.
+
+F:\f folders: 863
+2026-27 dest companies: 147 (+ _UNSORTED pile)
+2026-27 job rows: 219
+Local dest C:\SARASWATHI_2026_27: 6431 files, 6.16 GB (already copied)
+
+exact name on F:\f (append 2026-27 here): 114
+same name ignoring punctuation: 0
+NOT on F:\f — KEEP as new companies: 33
+unsorted dests: THIRUKONDA DIR-3 (leave)
+
+NOT on F:\f:
+  AARAVERSE PRIVATE LIMITED  (2 jobs, from_dest)
+  AMOHA ENGINEERING PRIVATE LIMITED  (1 jobs, from_dest)
+  ASHWATHI COLD STORAGE PRIVATE LIMITED  (1 jobs, from_dest)
+  BRILLYTICS TECHNOLOGY SOLUTIONS PRIVATE LIMITED  (1 jobs, from_dest)
+  CHARLIE ENGG CO PRIVATE LIMITED  (2 jobs, from_dest)
+  DIQC LABS (OPC) PRIVATE LIMITED  (1 jobs, from_dest)
+  HANVAR AGRO PRIVATE LIMITED  (1 jobs, from_dest)
+  JANVI AIKA FASHION EXPORTS PRIVATE LIMITED  (1 jobs, from_dest)
+  JAYA NACHIAR TEXTILE MILLS PRIVATE LIMITED  (1 jobs, from_dest)
+  KB GRID LLP  (1 jobs, from_dest)
+  LAADLALAADLI.INDIA PRIVATE LIMITED  (4 jobs, from_dest)
+  MADURAI KALYAN MESS PRIVATE LIMITED  (2 jobs, from_dest)
+  METAFORM PRIVATE LIMITED  (2 jobs, from_dest)
+  MTURN TOURISM PRIVATE LIMITED  (1 jobs, from_dest)
+  RENUKA ENGINEERING AND INFRASTRUCTURE PRIVATE LIMITED  (1 jobs, from_dest)
+  RUGR SIL PRIVATE LIMITED  (1 jobs, from_dest)
+  SHREE MADURAI MEENAKSHI SERVICE PRIVATE LIMITED  (1 jobs, from_dest)
+  SHUTUPPANDTRAVEL.COM PRIVATE LIMITED  (3 jobs, from_dest)
+  SIRAGU LOGISTICS PRIVATE LIMITED  (1 jobs, from_dest)
+  SIVA AUTOMOTIVE TRADING PRIVATE LIMITED  (1 jobs, from_dest)
+  SIVAG GRAND TECHNOLOGIES PRIVATE LIMITED  (1 jobs, from_dest)
+  SPECTRA PATTERN COMPOSITES PRIVATE LIMITED  (1 jobs, from_dest)
+  SPECTRA PATTERN PRIVATE LIMITED  (1 jobs, from_dest)
+  SPS TRUST LLP  (1 jobs, from_dest)
+  SRI ANDAL CAPITAL INVESTMENT WEALTH MANAGEMENT PRIVATE LIMITED  (1 jobs, from_dest)
+  SUNFACCIA FOODS PRIVATE LIMITED  (1 jobs, from_dest)
+  SV PACKAGING SOLUTIONS PRIVATE LIMITED  (2 jobs, from_dest)
+  THENANDAL FOODS PRIVATE LIMITED  (2 jobs, from_dest)
+  THIRU NERI LABS (OPC) PRIVATE LIMITED  (3 jobs, from_dest)
+  TUTORDA PRIVATE LIMITED  (2 jobs, from_dest)
+  VALENZA TECHNOLOGIES PRIVATE LIMITED  (1 jobs, from_dest)
+  VISIONARY IMPRESSIONS PRIVATE LIMITED  (2 jobs, from_dest)
+  WITREE TECHNOLOGY SOLUTIONS PRIVATE LIMITED  (1 jobs, from_dest)
+
+norm-only matches (rename dest to F:\f spelling if different):
+  (none)
+
+F:\f names tagged as likely non-company piles:
+  ALREADY FILED DIN 4FORMS
+  DIN FORMS
+  GPS AGENCY
+  KARAI MURUGAN CRANE
+  KM BIOMED
+  NEOMAX GROUP
+  PKP HOSPITAILITY FORM 11
+  POMMYS
+  RIGHT TRUST
+  ROYALCREST REAL ESTATE DUBAI
+  SARUMATHI ANNAMALAI PETRO
+  SASTIKAA ASSOCIATION
+  THIRU PUBLICATIONS

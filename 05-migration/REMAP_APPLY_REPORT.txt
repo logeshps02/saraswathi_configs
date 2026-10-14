@@ -1,0 +1,9 @@
+input_rows 6863
+output_rows 6863
+companies_after 872
+action keep 5786
+action remap_alias 1065
+action nil_from_12 11
+action nil_unmapped 1
+nil_unmapped 1
+ARUNKUMAR CASES | E:\NOT IN BACKUP\ARUNKUMAR CASES
