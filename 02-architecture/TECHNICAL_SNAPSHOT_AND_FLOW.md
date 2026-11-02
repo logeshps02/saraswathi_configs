@@ -312,7 +312,7 @@ flowchart LR
 | Endpoint | `saraswathi-nextcloud-db.c5giuu4c6ye6.ap-south-1.rds.amazonaws.com:3306` |
 | Private IP | 10.20.22.41 |
 | Engine | MySQL **8.4.9** Community, db.t4g.micro |
-| Billing | 1-yr **RDS Reserved Instance** `saraswathi-nextcloud-db-ri-1yr`, db.t4g.micro MySQL Single-AZ, No Upfront, $0.017/hr, from 2026-11-02 |
+| Billing | 1-yr **RDS Reserved Instance** `saraswathi-nextcloud-db-ri-1yr`, db.t4g.micro MySQL Single-AZ, No Upfront, $0.017/hr — **payment-failed 2026-11-02, not active; re-buy after billing fixed** |
 | AZ | ap-south-1b |
 | DB name / user | `nextcloud` / `ncadmin` (password in password manager only) |
 | Storage | gp3 20 GiB, autoscaling max 50 GiB |
@@ -496,7 +496,7 @@ flowchart TD
 - Talk `spreed` 24.0.4 (no HPB)
 - RDS automated backups 7 days; EBS daily AWS Backup 7 days (Aug manual `snap-0a1d21b760e5e6bf6` deleted 2026-11-02)
 - Elastic IP `13.234.211.7` on EC2 (2026-11-02)
-- 1-yr EC2 Savings Plan (t3a) + 1-yr RDS Reserved Instance db.t4g.micro (2026-11-02)
+- 1-yr EC2 Savings Plan (t3a) active 2026-11-02; RDS Reserved Instance **payment-failed** (re-buy pending)
 - Monthly cost budget `Saraswathi-Monthly-AWS-Budget` **$60** (Healthy; $9.44 MTD)
 - CloudWatch default + agent alarms — five **OK** (status/CPU/RDS/mem/disk)
 - AWS Backup vault + daily EBS plan; on-demand Completed in `saraswathi-backup-vault`
