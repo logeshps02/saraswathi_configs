@@ -98,3 +98,10 @@ Expected bill: **~$53–54/month** (under the $60 budget).
 1. Stop EC2 → change type back to `t3.medium` → start (≈1 min). The Savings Plan would then not apply.
 2. If the disk is damaged: restore `snap-006094f30c8419f2a` to a **new** volume (never overwrite prod blindly).
 3. Restore config from `/root/config.php.before-t3a-202611021254` if needed.
+
+## 9. Update 23:45 IST — RDS RI retry
+
+- Payments page: outstanding balance **₹0**. Aug ₹900.39 paid 17 Sep, Sep ₹2,872.88 paid 5 Oct, Oct ₹7,911.96 (invoice 2899262217) paid 2 Nov — all on the firm Visa card.
+- First RI `saraswathi-nextcloud-db-ri-1yr` = **payment-failed** (likely bought while the Oct invoice was still open). Not charged.
+- Re-bought as `saraswathi-nextcloud-db-ri-1yr-b` (same offering `120582b3-6772-4d5f-873c-bb71cb701048`) at 23:35 IST → `payment-pending`. The first attempt took several hours to resolve, so check RDS → Reserved instances tomorrow.
+- If `-b` also fails: open an AWS Support **Billing / Account** case (free) quoting both RI IDs — do not keep re-buying.
