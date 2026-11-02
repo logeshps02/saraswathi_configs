@@ -30,7 +30,7 @@ SSM only (no SSH 22). Instance `i-002509b77963fd5fc`. App `/var/www/nextcloud`. 
 - **Do not** DLM.
 - If a volume restore is approved: restore snapshot to a **new** volume, attach to a **stopped test** path, never swap prod blindly.
 - RDS: use a **new** instance from snapshot, not overwrite `saraswathi-nextcloud-db`.
-- After any EC2 stop/start, public IPv4 may change — update Route 53 `files` A only. Do not change NS / delete / transfer domain.
+- Public IPv4 is the Elastic IP `13.234.211.7` (since 2026-11-02) and stays the same after EC2 stop/start. If a **new** instance is ever built, re-associate this EIP to it. Do not change NS / delete / transfer domain.
 
 ## Monitoring
 
@@ -38,4 +38,4 @@ Five CloudWatch alarms **OK** → SNS `saraswathi-ops-alerts` (Confirmed). Do no
 
 ## Hard stops
 
-No NAT, no EIP unless IP lost after stop/start, no port 22, no PHP 8.5, no S3 150 GB fill, no extra users until groups/sharing is scheduled, no SMTP until asked.
+No NAT, do not release Elastic IP `13.234.211.7`, no port 22, no PHP 8.5, no S3 150 GB fill, no extra users until groups/sharing is scheduled, no SMTP until asked.

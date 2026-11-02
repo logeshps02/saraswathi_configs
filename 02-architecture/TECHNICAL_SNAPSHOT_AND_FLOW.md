@@ -1,6 +1,6 @@
 # Saraswathi Nextcloud — Technical Snapshot and Flow
 
-**As of:** 2026-09-12 (CloudTrail data events off; rclone DATA1 complete). Snapshot body still 2026-08-26 unless a row below is dated later.  
+**As of:** 2026-11-02 (cost optimisation: EC2 **t3a.medium**, Elastic IP **13.234.211.7**, 1-yr Savings Plan + RDS RI — see [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md)). Earlier: 2026-09-12 (CloudTrail data events off; rclone DATA1 complete). Snapshot body still 2026-08-26 unless a row below is dated later.  
 **Operator:** Logesh P S (`logesh.implementer`)  
 **Account:** 055855670388 (Saraswathi)  
 **Region:** ap-south-1 (Mumbai)  
@@ -34,7 +34,7 @@ Firm-owned **Nextcloud Hub 26 Spring (34.0.3)** on AWS Mumbai.
 ```mermaid
 flowchart LR
   U[User browser / Nextcloud client] -->|HTTPS 443| DNS[Route 53<br/>files.t-saraswathi.in]
-  DNS -->|A 3.111.213.217| N[nginx on EC2<br/>saraswathi-nextcloud-app]
+  DNS -->|A 13.234.211.7 EIP| N[nginx on EC2<br/>saraswathi-nextcloud-app]
   N -->|unix socket php8.3-fpm| PHP[PHP 8.3 Nextcloud]
   PHP --> DATA["Local files<br/>/opt/nextcloud/data"]
   PHP -->|3306 private| RDS[RDS MySQL<br/>nextcloud / ncadmin]
@@ -48,7 +48,7 @@ flowchart LR
 ### What happens on one page load
 
 1. Browser asks DNS for `files.t-saraswathi.in`.
-2. Route 53 returns the EC2 public IPv4 (`3.111.213.217` today; **not** an Elastic IP).
+2. Route 53 returns the EC2 **Elastic IP** `13.234.211.7` (since 2026-11-02; fixed across stop/start. Old auto-assigned `3.111.213.217` was released).
 3. TLS terminates on nginx (Let’s Encrypt ECDSA). HTTP 80 redirects to HTTPS. HSTS is set.
 4. nginx passes PHP to `unix:/run/php/php8.3-fpm.sock`.
 5. Nextcloud reads/writes:
@@ -72,7 +72,7 @@ flowchart TB
 
   subgraph "VPC vpc-0a25ed4fa155f526d 10.20.0.0/16"
     subgraph "public-a 10.20.1.0/24"
-      EC2["EC2 i-002509b77963fd5fc<br/>t3.medium Ubuntu 24.04<br/>10.20.1.144 + public IPv4"]
+      EC2["EC2 i-002509b77963fd5fc<br/>t3a.medium Ubuntu 24.04<br/>10.20.1.144 + EIP 13.234.211.7"]
     end
     subgraph "db-b 10.20.22.0/24 private"
       DB["RDS saraswathi-nextcloud-db<br/>10.20.22.41 MySQL 8.4.9"]
@@ -107,7 +107,7 @@ Security groups:
 
 ## 2b. Detailed live flow (how it works *right now*)
 
-This is the **current** production path only. S3 is **not** on the file path. There is **no** NAT, **no** EIP, **no** Talk HPB, **no** extra users.
+This is the **current** production path only. S3 is **not** on the file path. There is **no** NAT, **no** Talk HPB, **no** extra users. Public entry is the Elastic IP `13.234.211.7` (since 2026-11-02).
 
 ### A. One HTTPS request, step by step
 
@@ -126,7 +126,7 @@ sequenceDiagram
   participant DISK as /opt/nextcloud/data
 
   User->>R53: DNS A lookup
-  R53-->>User: 3.111.213.217
+  R53-->>User: 13.234.211.7 (Elastic IP)
   User->>UFW: TCP 443 (or 80)
   UFW->>NGX: allow 80/443
   alt port 80
@@ -199,7 +199,7 @@ sequenceDiagram
   CODE-->>NC: wopi-discovery XML HTTP 200
   NC->>PX: browser editor assets
   CODE->>WOPI: CheckFileInfo / GetFile
-  Note over WOPI: wopi_allowlist =<br/>127.0.0.1, ::1,<br/>10.20.1.144, 3.111.213.217
+  Note over WOPI: wopi_allowlist =<br/>127.0.0.1, ::1,<br/>10.20.1.144, 13.234.211.7
   WOPI->>DISK: read/write file
   WOPI->>RDS: lock / version metadata
   CODE-->>Admin: live editor in browser
@@ -266,8 +266,8 @@ flowchart LR
 | Item | Value |
 |---|---|
 | Domain | `t-saraswathi.in` (Route 53 register; auto-renew; transfer lock) |
-| Service name | `files.t-saraswathi.in` A → `3.111.213.217` TTL 300 |
-| Change ID | C09702172G2CLD1D4TXOC (2026-08-25) |
+| Service name | `files.t-saraswathi.in` A → `13.234.211.7` (Elastic IP) TTL 300 |
+| Change ID | C10319213ESNLUUVEI11Q (2026-11-02, moved to EIP); original C09702172G2CLD1D4TXOC (2026-08-25, `3.111.213.217`) |
 | Certificate | Let’s Encrypt ECDSA; expires **2026-11-22**; auto-renew |
 | Paths | `/etc/letsencrypt/live/files.t-saraswathi.in/` (never paste privkey) |
 | Do not | change NS, delete, transfer, or unlock the domain |
@@ -293,10 +293,11 @@ flowchart LR
 | Item | Value |
 |---|---|
 | Instance | i-002509b77963fd5fc `saraswathi-nextcloud-app` |
-| Type | t3.medium (2 vCPU, 3.7 GiB RAM) |
+| Type | **t3a.medium** (2 vCPU AMD EPYC, 3.7 GiB RAM) since 2026-11-02; was t3.medium |
+| Billing | 1-yr **EC2 Instance Savings Plan** t3a ap-south-1, No Upfront, $0.0155/hr, `358b5613-3e8e-4db9-b9b5-92acf54ea648`, 2026-11-02 → 2027-11-02 |
 | AMI / OS | ami-006f82a1d5a27da54 Ubuntu **24.04.4 LTS** kernel 7.0.0-1011-aws |
 | Private IP | 10.20.1.144 |
-| Public IPv4 | **3.111.213.217** (auto-assigned 2026-08-25; **not EIP**) |
+| Public IPv4 | **13.234.211.7** — Elastic IP `eipalloc-0cb0b191a0994190f` (`saraswathi-nextcloud-eip`), association `eipassoc-0e5928a0172ddb2eb`, since 2026-11-02. Old auto-assigned `3.111.213.217` released |
 | Disk | vol-0063c19bdcb7583bf 30 GiB gp3 encrypted `saraswathi-ebs` |
 | Key pair | none |
 | Termination protection | on |
@@ -311,6 +312,7 @@ flowchart LR
 | Endpoint | `saraswathi-nextcloud-db.c5giuu4c6ye6.ap-south-1.rds.amazonaws.com:3306` |
 | Private IP | 10.20.22.41 |
 | Engine | MySQL **8.4.9** Community, db.t4g.micro |
+| Billing | 1-yr **RDS Reserved Instance** `saraswathi-nextcloud-db-ri-1yr`, db.t4g.micro MySQL Single-AZ, No Upfront, $0.017/hr, from 2026-11-02 |
 | AZ | ap-south-1b |
 | DB name / user | `nextcloud` / `ncadmin` (password in password manager only) |
 | Storage | gp3 20 GiB, autoscaling max 50 GiB |
@@ -365,7 +367,7 @@ flowchart LR
 | Discovery | HTTP 200 XML at `.../proxy.php?req=/hosting/discovery` |
 | Custom wopi_url | **deleted** (built-in autodetect) |
 | allow_local_remote_servers | true |
-| wopi_allowlist | 127.0.0.1, ::1, 10.20.1.144, 3.111.213.217 |
+| wopi_allowlist | 127.0.0.1, ::1, 10.20.1.144, 13.234.211.7 (updated 2026-11-02; old `3.111.213.217` removed) |
 
 ### Groupware
 
@@ -420,7 +422,7 @@ flowchart LR
 |---|---|
 | RDS automated backups | Enabled, **7 days**, window 17:22–17:52 UTC; latest restore 2026-08-26 21:57 IST |
 | RDS snapshots | `rds:saraswathi-nextcloud-db-2026-08-24-18-50`, `rds:saraswathi-nextcloud-db-2026-08-25-17-32` |
-| EBS snapshot | `snap-0a1d21b760e5e6bf6` **Completed** 100%; 12.3 GiB; encrypted `saraswathi-ebs` |
+| EBS snapshot | `snap-0a1d21b760e5e6bf6` (Aug manual) **deleted 2026-11-02**. Pre-switch safety snapshot `snap-006094f30c8419f2a` (`saraswathi-pre-t3a-20261102`) — delete after ~1 week stable |
 | AWS Backup vault / DLM | vault `saraswathi-backup-vault` tags Project/Owner/Environment; plan daily 12:30 IST 7d; on-demand **Completed** `snap-0877c1316d9702f73`; DLM none |
 | Cost budget | `Saraswathi-Monthly-AWS-Budget` **$60**/mo (Healthy; $9.44 MTD 15.73%). Duplicate `_2` deleted |
 | SNS | `saraswathi-ops-alerts` EMAIL **Confirmed** |
@@ -492,7 +494,9 @@ flowchart TD
 - Groups: Firm-Admins (saraswathi.admin), Firm-Partners, Firm-Seniors, Firm-Juniors, Firm-Trainees, Firm-Departed empty
 - LibreSign 14.1.0 tools all success
 - Talk `spreed` 24.0.4 (no HPB)
-- RDS automated backups 7 days; EBS `snap-0a1d21b760e5e6bf6` Completed 100%
+- RDS automated backups 7 days; EBS daily AWS Backup 7 days (Aug manual `snap-0a1d21b760e5e6bf6` deleted 2026-11-02)
+- Elastic IP `13.234.211.7` on EC2 (2026-11-02)
+- 1-yr EC2 Savings Plan (t3a) + 1-yr RDS Reserved Instance db.t4g.micro (2026-11-02)
 - Monthly cost budget `Saraswathi-Monthly-AWS-Budget` **$60** (Healthy; $9.44 MTD)
 - CloudWatch default + agent alarms — five **OK** (status/CPU/RDS/mem/disk)
 - AWS Backup vault + daily EBS plan; on-demand Completed in `saraswathi-backup-vault`
@@ -531,7 +535,7 @@ objectstore (skipped; use External storage folder instead)
 - Extra users / groups / sharing matrix
 - 150 GB upload into **Backup_data** after M1S3 proof + M2 groups / sharing matrix
 - 150 GB upload
-- NAT Gateway, Elastic IP, DLM (AWS Backup covers scheduled EBS)
+- NAT Gateway, DLM (AWS Backup covers scheduled EBS). Elastic IP is **done** (2026-11-02)
 - Collabora **Docker** / second EC2 (not used; built-in CODE instead)
 
 **Hard stops still in force**
@@ -565,7 +569,7 @@ Step-by-step evidence lives under [03-aws-evidence/](../03-aws-evidence/). Chang
 
 | Item | Note |
 |---|---|
-| Public IP | Auto-assigned; **changes if instance is stopped/started**. Recheck DNS A and `wopi_allowlist`. Prefer EIP later. |
+| Public IP | **Elastic IP `13.234.211.7`** since 2026-11-02 — stays the same across stop/start. Do not release it (DNS A + `wopi_allowlist` depend on it). |
 | nginx wasm warn | Duplicate `wasm` type vs Ubuntu `mime.types`. Harmless. |
 | Talk HPB / Client Push / email / AppAPI daemon | Expected setupcheck leftovers |
 | Imagick SVG | Optional |

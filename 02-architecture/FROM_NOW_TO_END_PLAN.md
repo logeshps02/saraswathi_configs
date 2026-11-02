@@ -105,7 +105,7 @@ If we wait until “every later item” (S3, SMTP, HPB, 10 users, NAT, EIP) **th
 - Co-authoring with two users (B5)
 - Public links only if policy allows (C3)
 - Branding, ClamAV if still in scope
-- NAT / EIP only if a later design needs them
+- NAT only if a later design needs it (Elastic IP `13.234.211.7` done 2026-11-02)
 - Do **not** Apply pending RDS OS until a maintenance window
 - File → Export PDF remains known-broken until CODE resources are addressed
 
@@ -280,7 +280,7 @@ Do **not** create 10 users on 30 GB local disk if they will sync 132 GB.
 
 ## 6. What we will not do in the same breath as 132 GB
 
-- NAT, EIP, RDS OS Apply now, FSR, Object Lock, all-S3 data events, PHP 8.5, port 22, passwords in chat
+- NAT, RDS OS Apply now, FSR, Object Lock, all-S3 data events, PHP 8.5, port 22, passwords in chat (Elastic IP was added later, 2026-11-02)
 - Browser upload of the entire 132 GB tree
 - Filling S3 in the AWS console hoping Nextcloud sees it
 - Creating 10 users who then sync 132 GB onto 30 GB EBS

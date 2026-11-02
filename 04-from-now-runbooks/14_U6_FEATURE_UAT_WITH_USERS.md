@@ -44,7 +44,7 @@ Use a **copy**, not the only original.
 9. Both close.
 
 **Pass:** both can type; text from both remains on reopen.
-**Fail:** second user read-only / CODE crash / one session kicks the other. Record; Collabora on t3.medium may struggle (known hardware warnings).
+**Fail:** second user read-only / CODE crash / one session kicks the other. Record; Collabora on t3a.medium may struggle (known hardware warnings).
 
 ```
 U6-B both edit same doc: yes
