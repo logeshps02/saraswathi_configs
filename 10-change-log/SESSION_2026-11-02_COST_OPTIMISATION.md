@@ -48,7 +48,7 @@ October line items: EC2 t3.medium $33.09, RDS db.t4g.micro + gp3 $18.12, S3 $6.9
 | 6 | 18:34–18:35 | Stop → type **t3.medium → t3a.medium** → start | `i-002509b77963fd5fc` | **~47 s downtime**; same 2 vCPU / 4 GiB, AMD EPYC; private IP 10.20.1.144 unchanged |
 | 7 | 18:37 | Final `wopi_allowlist` = `127.0.0.1,::1,10.20.1.144,13.234.211.7` | `richdocuments` | Old IP removed |
 | 8 | 18:38 | **1-yr EC2 Instance Savings Plan**, t3a, ap-south-1, No Upfront, $0.0155/hr | `358b5613-3e8e-4db9-b9b5-92acf54ea648` (2026-11-02 → 2027-11-02) | Billing only; **active** |
-| 9 | 18:38 | **1-yr RDS Reserved Instance**, db.t4g.micro MySQL Single-AZ, No Upfront, $0.017/hr | `saraswathi-nextcloud-db-ri-1yr` | Billing only; state was `payment-pending` at 18:45 (normally becomes `active` automatically) |
+| 9 | 18:38 | **1-yr RDS Reserved Instance**, db.t4g.micro MySQL Single-AZ, No Upfront, $0.017/hr | `saraswathi-nextcloud-db-ri-1yr` | Billing only; **payment-failed** (seen 23:29 IST). Not charged, not active — RDS still billed on-demand. Re-buy after AISPL payment is fixed (§7) |
 
 ## 4. Verification after the switch
 
@@ -78,7 +78,7 @@ Known/pre-existing: `occ richdocuments:activate-config` reports `/hosting/discov
 | Item | Before | After | Saving |
 |---|---|---|---|
 | EC2 compute | $32.70 (t3.medium on-demand) | $11.32 (t3a Savings Plan) | ~$25.2 |
-| RDS instance | $15.33 | $12.41 (RI) | ~$3.4 |
+| RDS instance | $15.33 | $12.41 (RI — **pending re-purchase**, payment failed) | ~$3.4 (not yet) |
 | Aug manual snapshot | ~$0.3–0.8 | $0 | ~$0.3–0.8 |
 | **Total** | | | **~$29–30 / month** |
 
@@ -90,7 +90,7 @@ Expected bill: **~$53–54/month** (under the $60 budget).
 - Savings Plan covers **t3a** family in Mumbai only. If the server type changes family, the plan stops applying.
 - Do **not** release Elastic IP `13.234.211.7` (DNS + Office allowlist depend on it). An unattached EIP is also billed.
 - Delete `snap-006094f30c8419f2a` after ~1 week of stable running.
-- Check RDS → Reserved instances shows `active`.
+- **RDS RI saraswathi-nextcloud-db-ri-1yr = payment-failed.** Partner/root must: pay all Unpaid/Past due AISPL invoices (Aug ₹900.39 if still open; Oct invoice 2899262217 = $83.34), confirm a valid default card with Auto-pay, then buy the RI again with a new ID (e.g. saraswathi-nextcloud-db-ri-1yr-b). Saving ~$3.45/mo is not active until then.
 - Any external firewall / client allowlist using `3.111.213.217` must use `13.234.211.7`.
 
 ## 8. Rollback
