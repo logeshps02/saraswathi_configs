@@ -1,5 +1,7 @@
 # From Home — Next Step: Monthly AWS Budget
 
+> **Update 2026-11-02 (cost optimisation):** Snapshot `snap-0a1d21b760e5e6bf6` was deleted, and a 1-yr EC2 Savings Plan + RDS Reserved Instance were bought on 2026-11-02 after 60+ days of usage data. The "do not buy" lines below applied at build time. See [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 RDS backups are Enabled 7 days. EBS snapshot `snap-0a1d21b760e5e6bf6` was created. Confirm that snapshot **Completed** first (see backup guide §4).
 
 Then create a **cost budget**. Do not create extra users. Do not enable Fast Snapshot Restore. Do not create DLM this step.

@@ -1,5 +1,7 @@
 # From Home — Next Step: Nextcloud Office (built-in CODE)
 
+> **Update 2026-11-02 (cost optimisation):** Host is now **t3a.medium**; `wopi_allowlist` is now `127.0.0.1,::1,10.20.1.144,13.234.211.7`. Results below mentioning `3.111.213.217` are the original 2026-08-25 record. See [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 S3 IAM is proven. Nextcloud still uses local `/opt/nextcloud/data`.
 This step enables **Nextcloud Office** (`richdocuments`) plus the **built-in CODE** app (`richdocumentscode`) on the same host.
 

@@ -1,5 +1,7 @@
 # From Home — Next Step: RDS backup + one EBS snapshot
 
+> **Update 2026-11-02 (cost optimisation):** Manual snapshot `snap-0a1d21b760e5e6bf6` was **deleted** on 2026-11-02 (cost cleanup). Daily AWS Backup (7 days) continues in `saraswathi-backup-vault`. See [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 Talk (`spreed` 24.0.4) is enabled. No HPB. Quotation apps at enable-level are closed.
 
 Next: prove backups exist. Do **not** create extra users. Do **not** install CloudWatch agent, NAT, EIP, or AWS Backup vault in this step.

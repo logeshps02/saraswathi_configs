@@ -7,10 +7,10 @@ If you hit these, **stop** and ask. They are not required to finish testing thro
 | File → Export → PDF                                      | Known Collabora fail; use Save as PDF near filename          |
 | Talk HPB / video / screen share                            | Extra server/CPU; CODE already reports insufficient hardware |
 | Full-text search A8                                        | Needs indexer app + jobs; CPU                                |
-| ClamAV H11                                                 | Extra packages/RAM on t3.medium                              |
+| ClamAV H11                                                 | Extra packages/RAM on t3a.medium                             |
 | E2E encrypted folders H3                                   | Breaks Office/search; policy decision                        |
 | NAT Gateway                                                | Cost; not needed for current HTTPS                           |
-| Elastic IP                                                 | Only if stop/start IP churn becomes a problem                |
+| Elastic IP                                                 | **Done 2026-11-02** — `13.234.211.7`. Do not release it      |
 | Apply RDS OS update                                        | Maintenance window; not “now”                              |
 | Fast Snapshot Restore                                      | Cost; do not                                                 |
 | Object Lock / MFA delete / S3 website                      | Not in current design                                        |

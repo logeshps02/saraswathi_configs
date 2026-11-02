@@ -1,5 +1,7 @@
 # From Home — Next Step: EC2 Ubuntu for Nextcloud
 
+> **Update 2026-11-02 (cost optimisation):** EC2 is now **t3a.medium** and the public IPv4 is the Elastic IP **13.234.211.7** (`eipalloc-0cb0b191a0994190f`). The t3.medium / `3.111.213.217` values below are the original 2026-08-25 build record. See [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 RDS is Available and private. This EC2 starts hourly cost. Sign in as `logesh.implementer`. Region: Mumbai.
 
 Do not open SSH to `0.0.0.0/0`. Use SSM. Do not paste the RDS password anywhere in AWS tags.

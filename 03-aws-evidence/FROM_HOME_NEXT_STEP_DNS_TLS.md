@@ -1,5 +1,7 @@
 # From Home — Next Step: DNS A record + TLS
 
+> **Update 2026-11-02 (cost optimisation):** `files.t-saraswathi.in` A now points to the Elastic IP **13.234.211.7** (Route 53 change `C10319213ESNLUUVEI11Q`). The `3.111.213.217` results below are the original 2026-08-25 record; that IP has been released. See [SESSION_2026-11-02_COST_OPTIMISATION.md](../10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 Nextcloud is installed on HTTP only. Hostname will be `https://files.t-saraswathi.in`.
 
 Sign in as `logesh.implementer`. Region for EC2: **Mumbai**. Route 53 is global.

@@ -2,7 +2,7 @@
 
 **Who:** `saraswathi.admin` + Windows Nextcloud client on office broadband  
 **When:** After M2 all yes. M0 source `F:\Final` (~132 GB). Remote = **`/Backup_data`** (S3 mount). Disk stays 30 GiB.  
-**Do not:** browser zip/drag the tree. Do not S3 console upload. Do not stop/start EC2 mid-sync (public IP may change; not EIP). Do not Apply RDS OS. Do not create 10 users mid-copy. Do not grow EBS. Do not sync onto `/` home or `Firm/`.
+**Do not:** browser zip/drag the tree. Do not S3 console upload. Do not stop/start EC2 mid-sync (it interrupts the upload; public IP is now a fixed Elastic IP `13.234.211.7`). Do not Apply RDS OS. Do not create 10 users mid-copy. Do not grow EBS. Do not sync onto `/` home or `Firm/`.
 
 This will **not** finish in minutes. M0 is **~179k files / ~41k folders / ~132 GB**. The desktop client sends **one object at a time** through Nextcloud to S3 (same path as the 30 MB pilot). Expect **1–4+ days** on typical office broadband, longer if most files are tiny. Leave the PC on **power + network**. Pause only if CloudWatch disk ALARM or the pair is on `/` home.
 
@@ -98,7 +98,7 @@ Keep **Pause** until you change client limits. Then:
 If the client says **disconnected**:
 
 1. Browser: can you still open https://files.t-saraswathi.in ?
-2. If instance was rebooted: check EC2 **public IPv4**. If it changed, Route 53 **A** record `files` only — **never** NS / delete zone. Then wait DNS. Ask if unsure.
+2. If instance was rebooted: the public IP stays `13.234.211.7` (Elastic IP since 2026-11-02). Check EC2 shows that IP and Route 53 **A** `files` → `13.234.211.7` — **never** NS / delete zone. Ask if unsure.
 3. Resume client. Chunked upload should continue (A3/A4).
 
 ---
@@ -163,7 +163,7 @@ Open one **non-critical** DOCX. Close. Save-as PDF near filename if you want. Sk
 
 ### Why not browser-drag 132 GB
 
-Browser upload is one POST (max **512M** here), no good resume, tab/timeouts, and it would hammer PHP on t3.medium. The **desktop client** chunks and can resume. Staff **may** drag **small** files in the browser later (invoices, one PDF). That is not the 132 GB job.
+Browser upload is one POST (max **512M** here), no good resume, tab/timeouts, and it would hammer PHP on t3a.medium. The **desktop client** chunks and can resume. Staff **may** drag **small** files in the browser later (invoices, one PDF). That is not the 132 GB job.
 
 ### Delete local after sync — yes
 

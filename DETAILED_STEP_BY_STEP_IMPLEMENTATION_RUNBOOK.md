@@ -19,7 +19,7 @@ This runbook converts the quotation and feature index into an executable deliver
 5. Record every production change in a change log with date, operator, reason, and rollback plan.
 6. Do not migrate production data until the backup and restore path has been tested with sample data.
 7. Do not promise a feature solely because an app name exists. Test the exact feature in the chosen Nextcloud/app versions.
-8. Do not buy a Reserved Instance until at least 30 days of actual usage and stability data are available.
+8. Do not buy a Reserved Instance until at least 30 days of actual usage and stability data are available. (Met: 1-yr EC2 Savings Plan + RDS RI bought 2026-11-02 after 60+ days of live metrics — see `10-change-log/SESSION_2026-11-02_COST_OPTIMISATION.md`.)
 9. Keep all generated reports in a restricted project folder, not in public links or personal cloud storage.
 10. Use a password manager for credentials and delete temporary credentials after handover.
 

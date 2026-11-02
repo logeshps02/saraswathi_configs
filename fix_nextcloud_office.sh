@@ -75,14 +75,15 @@ sudo -u www-data php occ config:app:delete richdocuments disable_certificate_ver
 # Step 3: Restore correct wopi_allowlist + settings
 #
 # Per the project docs:
-#   wopi_allowlist: 127.0.0.1, ::1, 10.20.1.144, 3.111.213.217
+#   wopi_allowlist: 127.0.0.1, ::1, 10.20.1.144, 13.234.211.7
+#   (13.234.211.7 = Elastic IP since 2026-11-02; old 3.111.213.217 released)
 #   allow_local_remote_servers: true
 # ----------------------------------------------------------
 echo ""
 echo "[Step 3/6] Restoring wopi_allowlist and allow_local_remote_servers ..."
 
 sudo -u www-data php occ config:app:set richdocuments wopi_allowlist \
-    --value="127.0.0.1,::1,10.20.1.144,3.111.213.217"
+    --value="127.0.0.1,::1,10.20.1.144,13.234.211.7"
 echo "  ✔ wopi_allowlist set"
 
 sudo -u www-data php occ config:system:set allow_local_remote_servers --value=true --type=boolean

@@ -1,5 +1,7 @@
 # Incident Report: Nextcloud Office (Collabora) Failure & Fix
 
+> **Update 2026-11-02 (cost optimisation):** Public IP is now the Elastic IP **13.234.211.7**; current `wopi_allowlist` = `127.0.0.1,::1,10.20.1.144,13.234.211.7`. The `3.111.213.217` values below are this incident's original record. See [SESSION_2026-11-02_COST_OPTIMISATION.md](SESSION_2026-11-02_COST_OPTIMISATION.md).
+
 **Date:** 2026-10-12  
 **Operator:** Logesh P S (with remote AI assistance)  
 **Duration:** ~17:00–17:44 IST  
@@ -373,7 +375,7 @@ Replace the Office section in `02-architecture/TECHNICAL_SNAPSHOT_AND_FLOW.md` w
 | Before any Nextcloud update: check `df -h /` has ≥5 GiB free | Operator | Before each update |
 | After any Nextcloud update: verify Office works by opening a test document | Operator | After each update |
 | If public IP changes (instance stop/start): update DNS A record AND `wopi_allowlist` | Operator | On IP change |
-| Consider Elastic IP to prevent IP changes | Decision pending | Later |
+| Consider Elastic IP to prevent IP changes | **Done 2026-11-02** — EIP `13.234.211.7` | Done |
 
 ---
 

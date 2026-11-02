@@ -49,8 +49,8 @@ Master picture: [16_PLAN_S3_FOLDER_INDEX.md](16_PLAN_S3_FOLDER_INDEX.md) and [..
 
 - No passwords, app passwords, SMTP secrets, keys, or `config.php` in chat, git, or these notes.
 - No root from home. No port 22. No PHP 8.5.
-- No domain NS change / delete / transfer. Only `files` A record if IP changes after stop/start.
-- No NAT, no EIP, no Apply RDS OS update, no FSR, no Object Lock, no all-S3 CloudTrail data events. **S3 data events stay off** (2026-09-12) unless a written change says otherwise. Do not Stop logging / Delete `Saraswathi-management-trail`.
+- No domain NS change / delete / transfer. The `files` A record points to the Elastic IP `13.234.211.7` (2026-11-02) and should not need changing.
+- No NAT, no Apply RDS OS update, no FSR, no Object Lock, no all-S3 CloudTrail data events. **S3 data events stay off** (2026-09-12) unless a written change says otherwise. Do not Stop logging / Delete `Saraswathi-management-trail`. Do **not** release / disassociate Elastic IP `eipalloc-0cb0b191a0994190f` (13.234.211.7).
 - No `rclone sync`. No Nextcloud desktop full sync of Backup_data / ~123 GB. No recopy of `F:\f` / `E:\` (DATA1 check passed 2026-09-12). Do not stop EC2 to cut cost.
 - No File → Export → PDF retry (known fail). Use **Save as PDF** near the filename.
 - No dumping 132 GB into the S3 **console**. Nextcloud will not see those objects as Files folders unless they were uploaded **through** Nextcloud.
@@ -65,8 +65,8 @@ Master picture: [16_PLAN_S3_FOLDER_INDEX.md](16_PLAN_S3_FOLDER_INDEX.md) and [..
 | Item | Value |
 |---|---|
 | URL | https://files.t-saraswathi.in |
-| EC2 | `i-002509b77963fd5fc` `saraswathi-nextcloud-app` t3.medium |
-| Public IPv4 | Check EC2 if instance was stopped (was 3.111.213.217) |
+| EC2 | `i-002509b77963fd5fc` `saraswathi-nextcloud-app` **t3a.medium** (since 2026-11-02; was t3.medium) — covered by 1-yr Savings Plan |
+| Public IPv4 | **13.234.211.7** — Elastic IP `eipalloc-0cb0b191a0994190f` (fixed; old `3.111.213.217` released 2026-11-02) |
 | Volume | `vol-0063c19bdcb7583bf` 30 GiB gp3 |
 | Data dir | `/opt/nextcloud/data` |
 | App dir | `/var/www/nextcloud` |

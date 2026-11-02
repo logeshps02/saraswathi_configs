@@ -295,7 +295,7 @@ LibreOffice-style files open in the same editor.
 
 ## B5 — Real-time co-authoring
 
-> **Limit on this firm.** Two users can open the same DOCX. This small server (Collabora on t3.medium) may struggle; UAT warned hardware. Try with a copy, not the only original.
+> **Limit on this firm.** Two users can open the same DOCX. This small server (Collabora on t3a.medium, 2 vCPU / 4 GB) may struggle; UAT warned hardware. Try with a copy, not the only original.
 
 ### What it is
 
@@ -1381,7 +1381,7 @@ Browser shield against injected scripts.
 ## H11 — Anti-virus ClamAV
 
 > **Not configured on this firm.** Do not look for this button today.
-> NOT CONFIGURED. Extra RAM on t3.medium. Do not install during ingest.
+> NOT CONFIGURED. Extra RAM on t3a.medium. Do not install during ingest.
 
 ### What it is
 
