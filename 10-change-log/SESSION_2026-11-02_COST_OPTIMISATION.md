@@ -105,3 +105,11 @@ Expected bill: **~$53–54/month** (under the $60 budget).
 - First RI `saraswathi-nextcloud-db-ri-1yr` = **payment-failed** (likely bought while the Oct invoice was still open). Not charged.
 - Re-bought as `saraswathi-nextcloud-db-ri-1yr-b` (same offering `120582b3-6772-4d5f-873c-bb71cb701048`) at 23:35 IST → `payment-pending`. The first attempt took several hours to resolve, so check RDS → Reserved instances tomorrow.
 - If `-b` also fails: open an AWS Support **Billing / Account** case (free) quoting both RI IDs — do not keep re-buying.
+
+## 10. Update 2026-11-03 10:45 IST — RDS RI failed twice
+
+- `saraswathi-nextcloud-db-ri-1yr` and `saraswathi-nextcloud-db-ri-1yr-b` are both **payment-failed**. Account balance is ₹0 and invoices are paid on the firm Visa ••••5016, so this is **not** an unpaid-bill problem.
+- Nothing was charged. RDS keeps running on-demand. The EC2 Savings Plan `358b5613…` is still **active**.
+- Database Savings Plans are not an alternative: in ap-south-1 they cover only newer DB families (m7g, m7i, m8g …), **not db.t4g**.
+- **Do not re-buy again.** Next step is a free AWS Support case (Account and billing) from the root/partner login, asking AISPL why No Upfront RDS RI purchases fail and to complete or allow the purchase. AWS can retry RI charges only within the purchase month (November 2026).
+- If AWS can't fix it, skip the RDS RI. It only saves ~$3.45/month; the ~$25/month EC2 saving is unaffected.
